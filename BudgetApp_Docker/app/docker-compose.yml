@@ -1,0 +1,26 @@
+version: '3'
+volumes:
+  pgdata:
+services:
+  python:
+    # image: python:3.4
+    build:
+      context: .
+      dockerfile: docker/python/Dockerfile
+    volumes:
+      - ./budgetproject:/budgetproject
+    ports: 
+      - 8000:8000
+  postgres:
+    image: postgres:9.6
+    environment:
+      - POSTGRES_USER=budget
+      - POSTGRES_DB=budget
+      - POSTGRES_PASS=budget
+    volumes:
+      - "pgdata:/var/lib/postgresql/data"
+    ports: 
+      - 5432:5432
+
+
+   
