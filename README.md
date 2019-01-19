@@ -6,7 +6,7 @@ The real purpose of this app was to understand how should I use Docker. So you s
   - docker/python/Dockerfile
   - requirements.txt
    
-For running the app, I used a Virtual Machine based on Linux. Commands :
+For running the app, I used a Virtual Machine based on Linux. Main Verification Commands :
   - docker-compose up
   - docker images (to show images, their repository, tags and size)
   - docker container top (to display the running processes of a container)
